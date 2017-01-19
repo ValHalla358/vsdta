@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Very Simple ToDo List</title>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/app/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Fredericka+the+Great|Raleway" rel="stylesheet">
+    <!-- endinject -->
+</head>
+
+<body ng-controller="MainController">
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <h1>Your simple ToDo List</h1>
+    <div class="mainContent">
+        <div class="sortButton">
+            <button class="btn btn-primary" ng-click="sortType = 'task'">Sort by Task</button>
+            <button class="btn btn-primary" ng-click="sortType = 'class'">Sort by Priority</button>
+        </div>
+        <table class="table">
+            <tbody>
+                <tr class="table-danger" ng-repeat="x in myToDo | orderBy:sortType">
+                    <td class=" {{x.class}} ">{{x.task}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="form-inline inputToDoItem ">
+            <div class="form-group ">
+                <input class="form-control " type="text " ng-model="task " placeholder="Enter Task ">
+            </div>
+            <div class="form-group ">
+                <label class="col-md-4 control-label " for="selectbasic ">Priority</label>
+                <div class="col-md-4 ">
+                    <select id="selectbasic " name="selectbasic " class="form-control " ng-model="priority ">
+                        <option value="a danger ">High Priority</option>
+                        <option value="b warning ">Medium Priority</option>
+                        <option value="c active ">Low Priority</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group addRow">
+                <label class="col-md-4 control-label " for="singlebutton ">Add Task</label>
+                <div class="col-md-4 ">
+                    <button id="singlebutton " name="singlebutton " class="btn btn-primary " ng-click="addRow() ">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- inject:js -->
+    <script src="/app/app.js "></script>
+    <!-- endinject -->
+</body>
+
+</html>

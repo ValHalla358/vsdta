@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Amatic SC', cursive;
+    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Raleway', sans-serif;
+    src: https: //fonts.googleapis.com/css?family=Fredericka+the+Great;
+    src: https: //fonts.googleapis.com/css?family=Amatic+SC;
+    src: https: //fonts.googleapis.com/css?family=Raleway;
+}
+
+h1 {
+    font-family: 'Fredericka the Great', cursive;
+    border-bottom-width: 10px;
+    border-bottom-color: black;
+    font-size: 4em;
+}
+
+h1 {
+    text-align: center;
+}
+
+.mainContent {
+    text-align: center;
+}
+
+.table {
+    margin: auto;
+    width: 50%;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, .42);
+    padding: 10px;
+}
+
+.sortButton {
+    margin-bottom: 20px;
+}
+
+.form-inline {
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background: rgba(116, 169, 132, .53);
+    border: none;
+    font-family: Raleway, Helvetica, sans-serif;
+}
+
+.form-control {
+    background-color: rgba(226, 215, 145, .62);
+    border: none;
+    font-family: Raleway, Helvetica, sans-serif;
+}
+
+td {
+    font-family: Indie Flower, Helvetica, cursive;
+    font-size: 2.6em;
+}
+
+label {
+    font-family: Raleway, Helvetica, sans-serif;
+}
